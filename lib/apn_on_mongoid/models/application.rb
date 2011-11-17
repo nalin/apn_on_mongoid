@@ -4,7 +4,8 @@ module APN
     include Mongoid::Document
     include Mongoid::Timestamps
 
-    field :name
+    #field :name
+    field :appname
     field :identifier
     field :certificate
 
