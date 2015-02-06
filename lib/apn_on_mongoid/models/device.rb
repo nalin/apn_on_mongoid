@@ -4,8 +4,8 @@ module APN
     include Mongoid::Document
     include Mongoid::Timestamps
 
-    field :udid
-    field :device_info
+    field :udid, :type => String
+    field :device_info, :type => String
 
     index({ udid: 1 }, { unique: true, background: true })
     

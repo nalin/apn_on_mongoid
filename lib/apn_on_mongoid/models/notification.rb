@@ -5,13 +5,13 @@ module APN
     include Mongoid::Timestamps
     include ::ActionView::Helpers::TextHelper
 
-    field :sound
-    field :alert, :size => 150
+    field :sound, :type => String
+    field :alert, :type => String
     field :badge, :type => Integer
     field :payload, :type => Hash
     field :sent_at, :type => Time
-    field :device_language
-    field :errors_nb
+    field :device_language, :type => String
+    field :errors_nb, :type => String
 
     belongs_to :subscription, :class_name => "APN::Subscription"
     

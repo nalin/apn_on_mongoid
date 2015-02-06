@@ -4,7 +4,7 @@ module APN
     include Mongoid::Document
     include Mongoid::Timestamps
 
-    field :token
+    field :token, :type => String
 
     index({ token: 1 }, { unique: true, background: true })
     
