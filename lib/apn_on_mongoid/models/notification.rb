@@ -117,7 +117,7 @@ module APN
     # so as to not be sent again.
     #
 
-    def self.deliver(notifications = APN::Notification.all(:conditions => {:sent_at => nil}))
+    def self.deliver(notifications = APN::Notification.where(:sent_at => nil))
       unless notifications.nil? || notifications.empty?
 
         APN::Connection.open_for_delivery do |conn, sock|
