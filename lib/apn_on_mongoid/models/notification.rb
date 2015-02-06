@@ -13,7 +13,7 @@ module APN
     field :device_language
     field :errors_nb
 
-    referenced_in :subscription, :class_name => "APN::Subscription"
+    belongs_to :subscription, :class_name => "APN::Subscription"
     
     before_save :truncate_alert
     

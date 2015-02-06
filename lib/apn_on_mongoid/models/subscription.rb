@@ -13,7 +13,7 @@ module APN
     
     embedded_in :device, :class_name => "APN::Device", :inverse_of => :subscriptions
     
-    referenced_in :application, :class_name => "APN::Application"
+    belongs_to :application, :class_name => "APN::Application"
     
     # Stores the token (Apple's device ID) of the iPhone (device).
     # 

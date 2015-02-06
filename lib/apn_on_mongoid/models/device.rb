@@ -9,7 +9,7 @@ module APN
 
     index({ udid: 1 }, { unique: true, background: true })
     
-    referenced_in :notification, :class_name => "APN::Notification", :inverse_of => :device
+    belongs_to :notification, :class_name => "APN::Notification", :inverse_of => :device
     
     embeds_many :subscriptions, :class_name => "APN::Subscription"
     
